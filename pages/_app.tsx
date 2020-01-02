@@ -15,6 +15,9 @@ function MyApp({ Component, pageProps }) {
               Segoe UI, Roboto, Helvetica, Arial, sans-serif;
             font-weight: 400;
           }
+          * {
+            box-sizing: border-box;
+          }
         `}
       </style>
     </>

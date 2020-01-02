@@ -11,10 +11,12 @@ export const Centered = ({ children }) => {
           display: flex;
           align-items: center;
           flex-direction: column;
+          padding: 48px;
         }
 
         .inner {
-          min-width: 640px;
+          min-width: 250px;
+          width: 100%;
         }
       `}</style>
     </div>

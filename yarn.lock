@@ -879,20 +879,21 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@roomservice/browser@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-0.0.9.tgz#88ffe55a8537fbfaf72e2c16121b648927b3845b"
-  integrity sha512-yXSXQfwzvda9uANQ1BF80/lUHEhDL2wnwjd3Qy8tiDkdlUmLo2pw1hmJgn/W46WeUqM3pponi81yv9er2FRLag==
+"@roomservice/browser@0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-0.0.15.tgz#3a0dbfcf185a70079b6cb31c9c358690f7861ce9"
+  integrity sha512-ExTmHnSX8CO8jJGc+U5KfN2DBmYWc1TY7FDQEIUXbDUSE/uN4uT5hZRHVVvg9qdRCPl7JJIhQa3mPLm3rJlQSg==
   dependencies:
     automerge "^0.12.1"
     idb-keyval "^3.2.0"
     invariant "^2.2.4"
     ky "^0.16.1"
     ky-universal "^0.3.0"
+    lodash "^4.17.15"
     safe-json-stringify "^1.2.0"
     socket.io-client "^2.3.0"
 
-"@roomservice/node@^0.0.2":
+"@roomservice/node@0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@roomservice/node/-/node-0.0.2.tgz#ae1b759d1135e9b2f493d48fdebe596321eb7fe6"
   integrity sha512-+aGwxHL3aqpHcK4dRUZ3N/+69XZ7V9Ea8H2P/b626FkJvGxWK5ssm8j62ouNAflFf+uBYLHA72woL5fvfCpy4g==
@@ -900,10 +901,10 @@
     got "^10.0.3"
     superstruct "^0.8.2"
 
-"@roomservice/react@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-0.0.6.tgz#0eb7c3c76250c8ab547b9d9812bc2d91e340179f"
-  integrity sha512-K4MKNMPTJ8R1ChS3Moqt32bISQuPdfJAB5P75muxojN6cNeVtXDXzmAPwI1NQ0UE/0Msw6kRVIvUgZIbjSJYUQ==
+"@roomservice/react@0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-0.0.10.tgz#d68906a4624fd8c1dc47e6fdc25196b566a1fec7"
+  integrity sha512-S6xDXgBaTcbKKguUnAerN1Xy+Rdowu9i5lEA1xMnLdt1K/8lFH60KB3NHZjUpomZnv1KB8uVsp9oBknOBLH5EA==
   dependencies:
     invariant "^2.2.4"
     tiny-warning "^1.0.3"
@@ -964,6 +965,13 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/responselike/-/responselike-1.0.0.tgz#251f4fe7d154d2bad125abe1b429b23afd262e29"
   integrity sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==
+  dependencies:
+    "@types/node" "*"
+
+"@types/uuid@^3.4.6":
+  version "3.4.6"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-3.4.6.tgz#d2c4c48eb85a757bf2927f75f939942d521e3016"
+  integrity sha512-cCdlC/1kGEZdEglzOieLDYBxHsvEOIg7kp/2FYyVR9Pxakq+Qf/inL3RKQ+PA8gOlI/NnL+fXmQH12nwcGzsHw==
   dependencies:
     "@types/node" "*"
 
@@ -5734,7 +5742,7 @@ uuid@3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
 
-uuid@^3.3.2:
+uuid@^3.3.2, uuid@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
   integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==

@@ -9,16 +9,18 @@
     "start": "next start"
   },
   "dependencies": {
-    "@roomservice/browser": "^0.0.9",
-    "@roomservice/node": "^0.0.2",
-    "@roomservice/react": "^0.0.6",
+    "@roomservice/browser": "0.0.16",
+    "@roomservice/node": "0.0.2",
+    "@roomservice/react": "0.0.10",
     "next": "^9.1.6",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "@types/node": "^13.1.1",
     "@types/react": "^16.9.17",
+    "@types/uuid": "^3.4.6",
     "typescript": "^3.7.4"
   }
 }

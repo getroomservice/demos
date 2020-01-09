@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import uuid from "uuid/v4";
 import client from "../../lib/client";
 
-const room = client.room("client-room-4");
+const room = client.room("client-room-9");
 // @ts-ignore
 // room._socketURL = "http://localhost:3001";
 
@@ -19,8 +19,8 @@ export default () => {
     load();
   }, []);
 
-  function onAdd(title) {
-    const state = room.publishState(prevState => {
+  async function onAdd(title) {
+    const state = await room.publishState(prevState => {
       if (!prevState.todos) {
         prevState.todos = [];
       }
@@ -33,11 +33,6 @@ export default () => {
       });
     });
     setState(state);
-
-    setTimeout(() => {
-      // @ts-ignore
-      console.log(room._automergeConn);
-    }, 100);
   }
 
   const todos = Object.values(state.todos || []).map((todo: any) => (

@@ -109,7 +109,7 @@ const AddInput = ({ onAdd }) => {
 export default () => {
   const [shared, setShared, isConnected] = useRoomService(
     client,
-    "todos-demo-3"
+    "todos-demo-8"
   );
 
   function onAdd(title) {

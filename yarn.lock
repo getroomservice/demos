@@ -879,10 +879,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@roomservice/browser@0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-0.0.15.tgz#3a0dbfcf185a70079b6cb31c9c358690f7861ce9"
-  integrity sha512-ExTmHnSX8CO8jJGc+U5KfN2DBmYWc1TY7FDQEIUXbDUSE/uN4uT5hZRHVVvg9qdRCPl7JJIhQa3mPLm3rJlQSg==
+"@roomservice/browser@0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-0.0.16.tgz#8f6bc3f998329b6730cb5e3e86bde3cddb2c7e61"
+  integrity sha512-CBYdGIt0HVQ27NXkhlJdVkzHPAYGxbAzcg5ieklEVRl2fBcdb3U5pjMDThdoDITBarpNNO6DkLhodj6MfDNPMQ==
   dependencies:
     automerge "^0.12.1"
     idb-keyval "^3.2.0"
@@ -901,10 +901,10 @@
     got "^10.0.3"
     superstruct "^0.8.2"
 
-"@roomservice/react@0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-0.0.10.tgz#d68906a4624fd8c1dc47e6fdc25196b566a1fec7"
-  integrity sha512-S6xDXgBaTcbKKguUnAerN1Xy+Rdowu9i5lEA1xMnLdt1K/8lFH60KB3NHZjUpomZnv1KB8uVsp9oBknOBLH5EA==
+"@roomservice/react@0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-0.0.12.tgz#28d5004f3c54ac9218e32d748891140789948676"
+  integrity sha512-uetCiuWxSnyK7jZomdCZ+NODqFeIvYQ4NpA7rjAGDv+7XwM//e4KCFoi+iTXe9wuAi1allDOYjc4iFppbnZLpQ==
   dependencies:
     invariant "^2.2.4"
     tiny-warning "^1.0.3"

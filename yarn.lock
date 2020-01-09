@@ -879,19 +879,22 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@roomservice/browser@0.0.16":
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-0.0.16.tgz#8f6bc3f998329b6730cb5e3e86bde3cddb2c7e61"
-  integrity sha512-CBYdGIt0HVQ27NXkhlJdVkzHPAYGxbAzcg5ieklEVRl2fBcdb3U5pjMDThdoDITBarpNNO6DkLhodj6MfDNPMQ==
+"@roomservice/browser@0.0.16-rc.1":
+  version "0.0.16-rc.1"
+  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-0.0.16-rc.1.tgz#fab44c07048581ec61f2da573adc2d94e9dd74eb"
+  integrity sha512-ttGZ4jEAkEN8+pUpA5NVDBgZcRtxXl41zauGkRt0o1yaPH6dZ02E6Az18zmDRu38N9IjvUiD8VSoZjpBRYnbhw==
   dependencies:
     automerge "^0.12.1"
     idb-keyval "^3.2.0"
+    immutable "^4.0.0-rc.12"
     invariant "^2.2.4"
     ky "^0.16.1"
     ky-universal "^0.3.0"
     lodash "^4.17.15"
+    manymerge "2.2.0"
     safe-json-stringify "^1.2.0"
     socket.io-client "^2.3.0"
+    uuid "^3.3.3"
 
 "@roomservice/node@0.0.2":
   version "0.0.2"
@@ -930,6 +933,11 @@
     "@types/keyv" "*"
     "@types/node" "*"
     "@types/responselike" "*"
+
+"@types/events@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
+  integrity sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
 
 "@types/http-cache-semantics@*":
   version "4.0.0"
@@ -1351,6 +1359,11 @@ autodll-webpack-plugin@0.4.2:
     tapable "^1.0.0"
     webpack-merge "^4.1.0"
     webpack-sources "^1.0.1"
+
+automerge-clocks@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/automerge-clocks/-/automerge-clocks-1.2.0.tgz#b14a127c8206ae0cac80662855978dbba3a73b38"
+  integrity sha512-OuJSINp5Dv2qqWfuM/qhN9VajSWd+Sk19oLVR7tPih4xI+4dnu+6q6pNsCJkprx6zII/wMZPKT1olVSIcNY/RA==
 
 automerge@^0.12.1:
   version "0.12.1"
@@ -2971,6 +2984,11 @@ immutable@^3.8.2:
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
   integrity sha1-wkOZUUVbs5kT2vKBN28VMOEErfM=
 
+immutable@^4.0.0-rc.12:
+  version "4.0.0-rc.12"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.0.0-rc.12.tgz#ca59a7e4c19ae8d9bf74a97bdf0f6e2f2a5d0217"
+  integrity sha512-0M2XxkZLx/mi3t8NVwIm1g8nHoEmM9p9UBl/G9k4+hm0kBgOVdMV/B3CY5dQ8qG8qc80NN4gDV4HQv6FTJ5q7A==
+
 import-cwd@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/import-cwd/-/import-cwd-2.1.0.tgz#aa6cf36e722761285cb371ec6519f53e2435b0a9"
@@ -3500,6 +3518,15 @@ mamacro@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/mamacro/-/mamacro-0.0.3.tgz#ad2c9576197c9f1abf308d0787865bd975a3f3e4"
   integrity sha512-qMEwh+UujcQ+kbz3T6V+wAmO2U8veoq2w+3wY8MquqwVA3jChfwY+Tk52GZKDfACEPjuZ7r2oJLejwpt8jtwTA==
+
+manymerge@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/manymerge/-/manymerge-2.2.0.tgz#4c89ccbc2cb535f79252b040cf1ef89907c5a1a9"
+  integrity sha512-zSN0xCZSv8WG6khuPjqCAq2j0d+cQZeuZT6QkLHCrcziAnN4xRyPooOxRZh07J/Vt3XvFN6BjXR0RPiJxDsqpw==
+  dependencies:
+    "@types/events" "^3.0.0"
+    automerge-clocks "1.2.0"
+    invariant "^2.2.4"
 
 map-cache@^0.2.2:
   version "0.2.2"

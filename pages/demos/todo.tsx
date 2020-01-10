@@ -107,10 +107,7 @@ const AddInput = ({ onAdd }) => {
 };
 
 export default () => {
-  const [shared, setShared, isConnected] = useRoomService(
-    client,
-    "todos-demo-8"
-  );
+  const [shared, setShared] = useRoomService(client, "todos-demo-8");
 
   function onAdd(title) {
     setShared(prevState => {
@@ -159,7 +156,7 @@ export default () => {
     <Centered>
       <h1>Ye' old TODO app</h1>
       <AddInput onAdd={onAdd} />
-      {todos}
+      {todos.reverse()}
     </Centered>
   );
 };

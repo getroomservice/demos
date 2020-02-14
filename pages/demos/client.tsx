@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import uuid from "uuid/v4";
 import client from "../../lib/client";
 
-const room = client.room("client-room-9");
+const room = client.room("second example");
 // @ts-ignore
-// room._socketURL = "http://localhost:3001";
+room._socketURL = "http://localhost:3001";
 
 export default () => {
   const [state, setState] = useState<any>({});
@@ -12,15 +12,15 @@ export default () => {
   useEffect(() => {
     async function load() {
       setState(await room.restore());
-      const { state } = await room.connect();
-      setState(state);
-      room.onUpdate(state => setState(state));
+      const { doc } = await room.init();
+      setState(doc);
+      room.onSetDoc(state => setState(state));
     }
     load();
   }, []);
 
   async function onAdd(title) {
-    const state = await room.publishState(prevState => {
+    const state = await room.setDoc(prevState => {
       if (!prevState.todos) {
         prevState.todos = [];
       }

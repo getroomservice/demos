@@ -9,12 +9,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "@roomservice/browser": "0.0.16-rc.1",
+    "@roomservice/browser": "latest",
     "@roomservice/node": "0.0.2",
     "@roomservice/react": "0.0.12",
     "next": "^9.1.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "slate": "^0.57.1",
+    "slate-react": "^0.57.1",
     "uuid": "^3.3.3"
   },
   "devDependencies": {

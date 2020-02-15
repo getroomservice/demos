@@ -1,4 +1,4 @@
-import { useRoomService } from "@roomservice/react";
+import { useSharedState } from "@roomservice/react";
 import { useState } from "react";
 import uuid from "uuid/v4";
 import client from "../../lib/client";
@@ -107,7 +107,7 @@ const AddInput = ({ onAdd }) => {
 };
 
 export default () => {
-  const [shared, setShared] = useRoomService(client, "todos-demo-8");
+  const [shared, setShared] = useSharedState("todos-demo-8");
 
   function onAdd(title) {
     setShared(prevState => {

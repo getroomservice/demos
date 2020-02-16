@@ -65,7 +65,7 @@ function Cursor({ x, y, opacity }) {
         top: 0,
         left: 0,
         transform: `translate(${x}px, ${y}px)`,
-        height: 2,
+        height: 24,
         width: 24,
         background: light,
         borderBottom: `4px solid ${dark}`,

@@ -928,10 +928,10 @@
     got "^10.0.3"
     superstruct "^0.8.2"
 
-"@roomservice/react@^0.4.0-1":
-  version "0.4.0-1"
-  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-0.4.0-1.tgz#2601e8535526a4f3c495b4ec6fceb05155a7f9af"
-  integrity sha512-C1Mvk5siKaX45dUA/MJHai/xeAQJxqNUWRlKteJjcQqSLz0FZ2RUq4TQ56R05Oklvf94Ci432lyGBp6OrfeJvg==
+"@roomservice/react@0.4.0-7":
+  version "0.4.0-7"
+  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-0.4.0-7.tgz#a30161cc7e0f096a896e8f8bad0679c2bcad727a"
+  integrity sha512-bWfoctUITStf4qwphRJYPQ78YzlLRzQ6o449YIwXxrobWUogQuM2v5qrY7uhy8orWL0qVsgp0GlBYjPTB5IPhA==
   dependencies:
     "@roomservice/browser" "0.4.0-8"
     invariant "^2.2.4"

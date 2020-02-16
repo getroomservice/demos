@@ -5,6 +5,25 @@ import uuid from "uuid/v4";
 
 type Position = { x: number; y: number };
 
+function useMyCursorPosition() {
+  const [state, setState] = useState();
+
+  useEffect(() => {
+    const handleMouseMove = e => {
+      setState({
+        x: e.pageX,
+        y: e.pageY
+      });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  return state || { x: 0, y: 0 };
+}
+
 function useCursors(room: string) {
   const [cursors, setMyCursor] = usePresence<Position>(room, "cursors");
 
@@ -49,11 +68,11 @@ function hashCode(str: string): number {
   return hash;
 }
 
-function Cursor({ x, y, opacity }) {
+function Cursor({ x, y, opacity, shouldTransition }) {
   const [id] = useCookie("user");
 
   if (!id) {
-    return;
+    return null;
   }
 
   const [light, dark] = colors[Math.abs(hashCode(id)) % 7];
@@ -70,7 +89,9 @@ function Cursor({ x, y, opacity }) {
         background: light,
         borderBottom: `4px solid ${dark}`,
         borderRadius: 30,
-        transition: "transform 0.15s ease-out, opacity 0.15s",
+        transition: shouldTransition
+          ? "transform 0.15s ease-out, opacity 0.15s"
+          : "",
         opacity: `${opacity}`
       }}
     >
@@ -103,12 +124,37 @@ function Cursor({ x, y, opacity }) {
 
 function Obj() {
   const cursors = useCursors("cursor-room");
+  const myPos = useMyCursorPosition();
   return (
     <div>
-      <pre>{JSON.stringify(cursors, null, 2)}</pre>
+      <div className="prompt">
+        Hello! This a demo of mouse cursor support in Room Service.{" "}
+        <b>It requires a friend on a different computer to work best.</b> If
+        you're truly alone, try just opening up two different browsers (safari +
+        chrome for example). If you're on a mobile device, you'll be able to see
+        other cursors, but not be able to move your own.
+      </div>
       {Object.entries(cursors).map(([key, value]) => {
-        return <Cursor x={value.x} y={value.y} key={key} opacity={1} />;
+        return (
+          <Cursor
+            x={value.x}
+            y={value.y}
+            key={key}
+            opacity={1}
+            shouldTransition={true}
+          />
+        );
       })}
+
+      <Cursor x={myPos.x} y={myPos.y} opacity={1} shouldTransition={false} />
+
+      <style jsx>{`
+        .prompt {
+          width: 640px;
+          margin: 0 auto;
+          padding: 48px;
+        }
+      `}</style>
     </div>
   );
 }
@@ -134,6 +180,11 @@ function Page() {
       }}
     >
       <Obj />
+      <style jsx global>{`
+        html {
+          cursor: none;
+        }
+      `}</style>
     </RoomServiceProvider>
   );
 }

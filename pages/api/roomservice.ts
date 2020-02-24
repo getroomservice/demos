@@ -12,7 +12,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   const { room } = client.parse(req.body);
 
   return client.authorize(res, {
-    guest: req.cookies["user"] || "someone",
+    guest: req.cookies["user"] || "someone-else",
     room: room.reference
   });
 };

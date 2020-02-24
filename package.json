@@ -4,14 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3003",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "@roomservice/browser": "latest",
+    "@roomservice/browser": "next",
     "@roomservice/node": "0.0.2",
-    "@roomservice/react": "0.4.0-7",
+    "@roomservice/react": "0.4.2",
     "next": "^9.1.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

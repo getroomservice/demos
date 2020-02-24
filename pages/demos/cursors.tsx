@@ -128,12 +128,67 @@ function Obj() {
   return (
     <div>
       <div className="prompt">
-        Hello! This a demo of mouse cursor support in Room Service.{" "}
+        Hello! This is a demo of "presence", a new feature of Room Service. Here
+        it's being used to add mouse cursors. <br />
+        <br />
         <b>It requires a friend on a different computer to work best.</b> If
         you're truly alone, try just opening up two different browsers (safari +
         chrome for example). If you're on a mobile device, you'll be able to see
         other cursors, but not be able to move your own.
+        <h2>What's Presence?</h2>
+        Presence is a declarative API for describing what a user is doing in
+        real time.
+        <br />
+        <br />
+        Unlike Room Service's existing CRDT-based "documents", Presence does not
+        do merging, nor does it keep a history of previous states. It only
+        allows a user to edit their own state and say "here's what I'm doing
+        right now."
+        <p>
+          That makes it perfect for stuff like:
+          <ul>
+            <li>Mouse cursors (like this demo)</li>
+            <li>Cell-positions in a spread sheet</li>
+            <li>Draggable UIs</li>
+            <li>Sharing GPS locations</li>
+            <li>Sharing tab a user's on</li>
+            <li>Sharing the device the user's on</li>
+            <li>???</li>
+          </ul>
+        </p>
+        <p>
+          Presence is a low-level react hook that you can use to build other
+          stuff on top of. For example, for this demo, we've made a{" "}
+          <code>useCursors</code> hook that uses Presence to store and update
+          each person's position in real-time.
+        </p>
+        <p>
+          <pre>
+            {`
+function useCursors(room: string) {
+  const [cursors, setMyCursor] = usePresence(room, "cursors");
+
+  useEffect(() => {
+    const handleMouseMove = e => {
+      setMyCursor({
+        x: e.pageX,
+        y: e.pageY
+      });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [room]);
+
+  return cursors;
+}
+
+// We'll also be releasing this as an npm module!`.trim()}
+          </pre>
+        </p>
       </div>
+
       {Object.entries(cursors).map(([key, value]) => {
         return (
           <Cursor

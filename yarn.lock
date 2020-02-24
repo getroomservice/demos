@@ -903,10 +903,10 @@
     socket.io-client "^2.3.0"
     uuid "^3.3.3"
 
-"@roomservice/browser@latest":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-0.3.1.tgz#4767a9a5376112d14a755087833ca27c0d9cfa20"
-  integrity sha512-sfdmhi0jhskU0ll7t5H2GlJKz5nCTvI+N0tvKhy7Wif0aLx7V7e62huLZSDnVpm7qN1fcTronOxDBbXi+8g1WQ==
+"@roomservice/browser@next":
+  version "0.4.0-10"
+  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-0.4.0-10.tgz#968983c2b95cb03fa78422be82cf25ba9b8134de"
+  integrity sha512-0Gq1q78E+bae1ztNI7qn4lHhMHhRZSI7wwOxuK5UJ495csQlOsj+zdsvugwqeBdXCqxxxA8siHANjVm8FYREQg==
   dependencies:
     automerge "^0.12.1"
     idb-keyval "^3.2.0"
@@ -928,10 +928,10 @@
     got "^10.0.3"
     superstruct "^0.8.2"
 
-"@roomservice/react@0.4.0-7":
-  version "0.4.0-7"
-  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-0.4.0-7.tgz#a30161cc7e0f096a896e8f8bad0679c2bcad727a"
-  integrity sha512-bWfoctUITStf4qwphRJYPQ78YzlLRzQ6o449YIwXxrobWUogQuM2v5qrY7uhy8orWL0qVsgp0GlBYjPTB5IPhA==
+"@roomservice/react@0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-0.4.2.tgz#5a53c084345b0833a011354bd5a66ba32c08961b"
+  integrity sha512-VCjLNE0vg+UFcD/aFZVokfFBujSKv2qrm+0Q8q1ATdg4qJdgydRft0p/xY6fIYdRdjvIL/HZpMc2sQpJTMitng==
   dependencies:
     "@roomservice/browser" "0.4.0-8"
     invariant "^2.2.4"
